@@ -13,4 +13,6 @@ $mac = (Get-WmiObject win32_networkadapterconfiguration | Where-Object {$_.IPAdd
 $mac = $mac.Trim()
 $url = 'https://guatraroom.eastasia.cloudapp.azure.com/?token={0}'-f $mac
 
-start-process $url
+#start-process $url
+
+cmd /c "C:\Program Files\Mozilla Firefox\firefox.exe" --kiosk $url
