@@ -1,6 +1,7 @@
 from django.shortcuts import render
 from django.core.files.storage import FileSystemStorage
-from django.http import HttpResponseRedirect
+# from django.http import HttpResponseRedirect
+from django.shortcuts import redirect
 
 
 def image_upload(request):
@@ -14,5 +15,5 @@ def image_upload(request):
             "image_url": image_url
         })
     # return render(request, "upload.html")
-    return HttpResponseRedirect('https://www.bing.com')
+    return redirect('https://www.bing.com')
 
