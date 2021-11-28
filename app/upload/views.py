@@ -2,6 +2,11 @@ from django.shortcuts import render
 from django.core.files.storage import FileSystemStorage
 # from django.http import HttpResponseRedirect
 from django.shortcuts import redirect
+import csv
+with open('mac_map.csv', newline='') as csvfile:
+    spamreader = csv.reader(csvfile, delimiter=' ', quotechar='|')
+    for row in spamreader:
+        print(', '.join(row))
 
 
 def image_upload(request):
