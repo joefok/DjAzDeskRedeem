@@ -15,6 +15,6 @@ base_url = 'https://guatraroom.eastasia.cloudapp.azure.com/guacamole/?username=s
 
 def image_upload(request):
     token_get = request.GET.get('token')
-    return redirect(base_url.replace('secret', token[token_get]))
+    return redirect(base_url.replace('secret', '{}'.format(token[token_get])))
     # return render(request, "upload.html")
 
