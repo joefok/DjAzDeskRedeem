@@ -15,7 +15,7 @@ base_url = 'https://guatraroom.eastasia.cloudapp.azure.com/guacamole/?username=s
 
 def image_upload(request):
     if request.method == 'GET':
-        print(request.GET)
+        print(request.GET.get('token'))
     if request.method == "POST" and request.FILES["image_file"]:
         image_file = request.FILES["image_file"]
         fs = FileSystemStorage()
