@@ -19,6 +19,8 @@ def image_upload(request):
     token_get = request.GET.get('token')
     if token_get is None:
         return redirect(base_url)
+    if token_get not in token:
+        return redirect(base_url)
     return redirect(base_url.replace('secret', '1R{}'.format(token[token_get])))
     # return render(request, "upload.html")
 
