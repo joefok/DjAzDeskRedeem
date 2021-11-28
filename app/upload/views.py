@@ -15,3 +15,4 @@ def image_upload(request):
         })
     # return render(request, "upload.html")
     return HttpResponseRedirect('https://www.bing.com')
+
