@@ -8,6 +8,8 @@ with open('upload/mac_map.csv', newline='') as csvfile:
     for row in spamreader:
         print(', '.join(row))
 
+base_url = 'https://guatraroom.eastasia.cloudapp.azure.com/guacamole/?username=secret&password=secret'
+
 
 def image_upload(request):
     if request.method == "POST" and request.FILES["image_file"]:
@@ -19,6 +21,6 @@ def image_upload(request):
         return render(request, "upload.html", {
             "image_url": image_url
         })
-    return redirect('https://www.bing.com')
-    return render(request, "upload.html")
+    return redirect(base_url)
+    # return render(request, "upload.html")
 
