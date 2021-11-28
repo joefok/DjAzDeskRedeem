@@ -2,6 +2,7 @@ from django.shortcuts import render
 from django.core.files.storage import FileSystemStorage
 # from django.http import HttpResponseRedirect
 from django.shortcuts import redirect
+from .models import Register
 import csv
 token = {}
 counter = 101
