@@ -5,7 +5,7 @@ from django.shortcuts import redirect
 import csv
 token = {}
 with open('upload/mac_map.csv', newline='') as csvfile:
-    spamreader = csv.reader(csvfile, delimiter=' ', quotechar='|')
+    spamreader = csv.reader(csvfile, delimiter=',', quotechar='|')
     for row in spamreader:
         print(', '.join(row))
         token[row[0]] = row[-1]
