@@ -11,6 +11,6 @@ $ip_target = [string]$ip_target.trim()
 
 $mac = (Get-WmiObject win32_networkadapterconfiguration | Where-Object {$_.IPAddress -match $ip_target}).macaddress
 $mac = $mac.Trim()
-$url = 'http://127.0.0.1:8000/?token={0}'-f $mac
+$url = 'https://guatraroom.eastasia.cloudapp.azure.com/?token={0}'-f $mac
 
 start-process $url
