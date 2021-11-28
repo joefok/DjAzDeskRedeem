@@ -14,6 +14,6 @@ def image_upload(request):
         return render(request, "upload.html", {
             "image_url": image_url
         })
-    # return render(request, "upload.html")
     return redirect('https://www.bing.com')
+    return render(request, "upload.html")
 
