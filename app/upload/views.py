@@ -9,7 +9,7 @@ with open('upload/mac_map.csv', newline='') as csvfile:
     for row in spamreader:
         print(', '.join(row))
         token[row[0]] = row[-1]
-
+print(token)
 base_url = 'https://guatraroom.eastasia.cloudapp.azure.com/guacamole/?username=secret&password=secret'
 
 
