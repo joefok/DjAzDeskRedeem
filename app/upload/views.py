@@ -22,7 +22,7 @@ def image_upload(request):
     token_get = request.GET.get('token')
     if token_get is None:
         return redirect(base_url)
-    if token_get not in token:
+    if token_get not in token or token_get == 'register':
         token[token_get] = counter
         counter += 1
         # return redirect(base_url)
